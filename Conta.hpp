@@ -5,15 +5,24 @@
 
 class Conta
 {
+
+private:
+    static int numeroContas;
+
+public:
+    static int recuperaNumeroDeContas();
+
 private:
     std::string numeroConta;
     std::string cpfTitular;
     std::string nomeTitular;
-    float saldo = 0;
+    float saldo;
 
 public:
+    Conta(std::string numeroConta, std::string cpfTitular, std::string nomeTitular);
+    ~Conta();
     void sacar(float valorASacar);
-    void depositar(float valorADepositar);
+    void depositar(float valorADepositar);  
     float getSaldo() const;
     void definirNomeTitular(std::string nome);
     std::string getNomeTitular();
@@ -21,5 +30,6 @@ public:
     std::string getCPFTitular();
     void definirNumeroConta(std::string numero);
     std::string getNumeroConta();
-
+private:
+    void verificaTamanhodoNome();
 };

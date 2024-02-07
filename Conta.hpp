@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Conta.hpp"
+#include "Titular.hpp"
 
 class Conta
 {
@@ -14,22 +15,16 @@ public:
 
 private:
     std::string numeroConta;
-    std::string cpfTitular;
-    std::string nomeTitular;
+    Titular titular;
     float saldo;
 
 public:
-    Conta(std::string numeroConta, std::string cpfTitular, std::string nomeTitular);
+    Conta(std::string numeroConta, Titular titular);
     ~Conta();
     void sacar(float valorASacar);
     void depositar(float valorADepositar);  
     float getSaldo() const;
-    void definirNomeTitular(std::string nome);
-    std::string getNomeTitular();
-    void definirCPFTitular(std::string cpf);
-    std::string getCPFTitular();
+    Titular getTitular();
     void definirNumeroConta(std::string numero);
     std::string getNumeroConta();
-private:
-    void verificaTamanhodoNome();
 };

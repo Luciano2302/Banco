@@ -1,4 +1,6 @@
 ﻿  Banco.cpp
   Conta.cpp
+  Cpf.cpp
+  Titular.cpp
   Gerando Código...
   Banco.vcxproj -> C:\Users\Luciano\source\repos\Banco\x64\Debug\Banco.exe
